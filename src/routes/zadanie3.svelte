@@ -21,12 +21,15 @@
       currentDate = new Date()
       timespan = targetDate - currentDate
 
-      if (timespan <=0 ) clearInterval(timer)
-
-      days =    Math.floor((timespan) / day)
-      hours =   Math.floor((timespan % day) / hour)
-      minutes = Math.floor((timespan % hour) / minute)
-      seconds = Math.floor((timespan % minute) / second)
+      if (timespan > 0) {
+        days =    Math.floor((timespan) / day)
+        hours =   Math.floor((timespan % day) / hour)
+        minutes = Math.floor((timespan % hour) / minute)
+        seconds = Math.floor((timespan % minute) / second)
+      } else {
+        timespan = null
+        clearInterval(timer)
+      }
     }, 1000)
   }
 
@@ -36,6 +39,8 @@
 <aside class="counter rim">
   {#if timespan}
     <h5>Do końca pozostało: {days <= 10 ? `0${days}` : days}-{hours <= 10 ? `0${hours}` : hours}-{minutes <= 10 ? `0${minutes}` : minutes}-{seconds <= 10 ? `0${seconds}` : seconds}</h5>
+  {:else}
+    <h5>Czas upłynął</h5>
   {/if}
 </aside>
 
