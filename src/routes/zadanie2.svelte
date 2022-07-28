@@ -68,7 +68,7 @@
         {#each randomOffers as offer}
         <div class="slide">
           <div class="offer">
-            <img src={'http:' + offer.imgURL} alt={offer.name}>
+            <img src={'https:' + offer.imgURL} alt={offer.name}>
             <div>
               <p>{offer.name}</p>
               <p class="price">{parseFloat(offer.price).toLocaleString().replace(',', '').replace('.', ',')} {offer.currency === 'PLN' ? 'zł' : offer.currency}</p>

@@ -42,7 +42,7 @@
   {#if randomOffers.length}
     {#each randomOffers as offer}
       <div class={offer.active ? 'offer active' : 'offer disactive'}>
-        <img src={'http:' + offer.imgURL} alt={offer.name}>
+        <img src={'https:' + offer.imgURL} alt={offer.name}>
         <p>{parseFloat(offer.price).toLocaleString().replace(',', '').replace('.', ',')} {offer.currency === 'PLN' ? 'zł' : offer.currency}</p>
       </div>
     {/each}

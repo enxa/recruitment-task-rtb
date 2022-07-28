@@ -42,8 +42,7 @@ export const get = async () => {
             "currency": "PLN",
             "imgURL": "//rekrutacjartb.pl/developer/images/offer6.jpg"
           }
-        ],
-        
+        ]
       }
     }  
   } catch (error) {
