@@ -47,7 +47,7 @@
       </div>
     {/each}
     <div class="logo">
-      <span>꞊</span><img src="http://rekrutacjartb.pl/developer/images/logo_rtb.png" alt="RTB House logo">
+      <span>꞊</span><img src="/logo_rtb.png" alt="RTB House logo">
     </div>
   {/if}
 </aside>
